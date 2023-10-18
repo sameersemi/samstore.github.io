@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SAMSTORE - Your One-Stop Online Shop</title>
+    <link rel="shortcut icon" href="C:\Users\WALEED TRADERS\Videos\spider man\vvvvv.png" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: #FFD700;
+            color: #8A2BE2;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            color: #4169E1;
+        }
+
+        .login-container {
+            text-align: center;
+            padding: 20px;
+            background: #FFD700;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-container h2 {
+            color: #8A2BE2;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #FFA07A;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #4169E1;
+            border: none;
+            color: #FFFFFF;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background: #483D8B;
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 40px;
+        }
+
+        .product-card {
+            background: #FFF8DC;
+            width: 200px;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .product-image {
+            width: 100%;
+            max-height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .add-to-cart-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #4169E1;
+            border: none;
+            color: #FFFFFF;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .add-to-cart-button:hover {
+            background: #483D8B;
+        }
+
+        .cart {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: #9932CC;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            color: #FFFFFF;
+            font-size: 24px;
+        }
+
+        .cart-content {
+            max-height: 300px;
+            overflow-y: auto;
+            color: #4A4949;
+            background: #FFD700;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>SAMSTORE - Your One-Stop Online Shop</h1>
+
+            <h1>Upgrade your wardrobe effortlessly with our chic and affordable fashion finds!</h1>
+        </div>
+        <div class="login-container">
+            <h2>LOGIN</h2>
+            <form>
+                <input type="text" placeholder="Username">
+                <input type="password" placeholder="Password">
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <!-- Rest of your content remains the same -->
+    </div>
+
+    <div class="cart">
+        <span>🛒</span>
+    </div>
+
+    <div class="cart-content">
+        <h1 align="center">Products</h1>
+        <!-- Cart items will be added here dynamically using JavaScript -->
+    </div>
+    <div class="product-container">
+
+    
+        <div class="product-card">
+            <img class="product-image" src="C:\Users\WALEED TRADERS\Videos\spider man\mmmm.jpeg" alt="sameer gaandu">
+            <h3>Product 2</h3>
+            <p>$15.00</p>
+            <button class="add-to-cart-button">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img class="product-image" src="C:\Users\WALEED TRADERS\Videos\spider man\mmmm.jpeg" alt="sameer gaandu">
+            <h3>Product 2</h3>
+            <p>$15.00</p>
+            <button class="add-to-cart-button">Add to Cart</button>
+        </div>
+    
+    
+        <div class="product-card">
+            <img class="product-image" src="C:\Users\WALEED TRADERS\Videos\spider man\sameer.jpeg" alt="Product 3">
+            <h3>Product 3</h3>
+            <p>$20.00</p>
+            <button class="add-to-cart-button">Add to Cart</button>
+        </div>
+        <!-- Add more product cards as needed -->
+    </div>
+    <div class="product-container" id="product-container">
+        <!-- Product cards will be added here dynamically using JavaScript -->
+    </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Define an array of products (you can fetch this from an API in a real-world scenario)
+        const products = [
+            {
+                name: "Product 1",
+                image: "C:\\path\\to\\product1.jpg",
+                price: 5000
+            },
+            {
+                name: "Product 2",
+                image: "C:\\path\\to\\product2.jpg",
+                price: 15.00
+            },
+            {
+                name: "Product 3",
+                image: "C:\Users\WALEED TRADERS\Videos\spider man\mmmm.jpeg",
+                price: 20.00
+            }
+            // Add more products as needed
+        ];
+
+        const productContainer = document.getElementById('product-container');
+
+        // Loop through products and create product cards
+        products.forEach(product => {
+            const productCard = document.createElement('div');
+            productCard.classList.add('product-card');
+
+            productCard.innerHTML = `
+                <img class="product-image" src="${product.image}" alt="${product.name}">
+                <h3>${product.name}</h3>
+                <p>$${product.price.toFixed(2)}</p>
+                <button class="add-to-cart-button">Add to Cart</button>
+            `;
+
+            productContainer.appendChild(productCard);
+        });
+    });
+</script>
+
+    
+    
+    
+</body>
+</html>
+
+

@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+   padding: 0; 
+   box-sizing: border-box;
+   font-family: "poppins" sans-serif;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background:  #9932CC;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+
+
+
+
+
+
+
+
+
+
+.cart-content {
+    max-height: 300px;
+    color: #4A4949;
+    background: #FFD700; /* Gold */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Add this line */
+}
